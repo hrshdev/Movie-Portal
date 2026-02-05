@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import '../css/NavBar.css';
+import logo from '../assets/HrshDev.svg';
 
 function NavBar() {
     function resetHome() {
@@ -10,7 +11,10 @@ function NavBar() {
     return (
         <nav className="navbar">
             <div className="navbar-brand">
-                <Link to="/" onClick={resetHome}>Movie Portal</Link>
+                <Link to="/" onClick={resetHome} className="brand-link">
+                    <img src={logo} alt="HrshDev logo" className="brand-logo" />
+                    <span className="brand-title">Movie Portal</span>
+                </Link>
             </div>
             <div className="navbar-links">
                 <Link to="/" className="nav-link" onClick={resetHome}>Home</Link>
